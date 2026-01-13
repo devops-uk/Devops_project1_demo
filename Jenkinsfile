@@ -9,16 +9,7 @@ pipeline {
 
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/devops-uk/DevOpsCodeDemo.git'
-            }
-        }
-
-        stage('Debug Workspace') {
-            steps {
-                sh '''
-                    pwd
-                    ls -l
-                '''
+                checkout scm
             }
         }
 
